@@ -69,4 +69,11 @@ from sqlalchemy import create_engine <br>
 [jsonify](https://www.fullstackpython.com/flask-json-jsonify-examples.html) is a function in Flask's flask.json module. jsonify serializes data to JavaScript Object Notation (JSON) format, wraps it in a Response object with the application/json mimetype. <br>
 [joblib](https://joblib.readthedocs.io/en/latest/) is a set of tools to provide lightweight pipelining in Python. <br>
 ## Description
-The last part is
+The last part we'll display your results in a Flask web app. [Udacity](https://www.udacity.com/) provided a working web app.
+On the web app ther is an input fieled for distress messages, which will be analysed after pushing the "Classify Message" button.
+Below we see the distribution of the message genres.
+The analysis shows how the message has been categorized.
+
+## Authors, Acknowledgements
+
+Author: Oliver Groß
