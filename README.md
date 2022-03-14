@@ -6,12 +6,9 @@
 ## Installations
 
 import pandas as pd <br>
-import sys, os.path <br>
 from sqlalchemy import create_engine
 
 [Panda](https://pandas.pydata.org/) is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. <br>
-[sys](https://docs.python.org/3/library/sys.html) provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. <br>
-[os.path](https://docs.python.org/3/library/os.path.html) implements some useful functions on pathnames. <br>
 [create engine](https://docs.sqlalchemy.org/en/14/core/engines.html) creates an Engine instance.
 ## Description
 The first part of the data pipeline is the extract, transform, and load process. Here the dataset will be read, cleaned and then stored in a SQLite database.  
@@ -36,6 +33,7 @@ from sklearn.ensemble import RandomForestClassifier <br>
 from sklearn.model_selection import GridSearchCV <br>
 from sklearn.metrics import f1_score, precision_score, recall_score <br>
 
+[sys](https://docs.python.org/3/library/sys.html) provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. <br>
 [nltk](https://www.nltk.org/) provides easy-to-use interfaces, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers for industrial-strength NLP libraries. <br>
 [re](https://docs.python.org/3/library/re.html) provides regular expression matching operations similar to those found in Perl. <br>
 [sqlalchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL. <br>
