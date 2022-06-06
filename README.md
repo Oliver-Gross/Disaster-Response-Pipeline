@@ -92,10 +92,10 @@ The analysis shows how the message has been categorized.
 
 2. Go to `app` directory: `cd app`
 
-3.    - To run ETL pipeline that cleans data and stores in database
+3.    - To run ETL pipeline that cleans data and stores in database <br>
         `python process_data.py`
-      - To run ML pipeline that trains classifier and saves
-        `python train_classifier.py
+      - To run ML pipeline that trains classifier and saves <br>
+        `python train_classifier.py`
 
 4. Run your web app: `python run.py`
 
