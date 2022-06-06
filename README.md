@@ -2,7 +2,18 @@
 ## Project for Udacity Data Scientist Nanodegree
 ![](https://upload.wikimedia.org/wikipedia/commons/3/3b/Udacity_logo.png)
 
-## process_data.py
+### Table of Contents
+
+1. [Installations for process_data.py](#insta_pro)
+2. [Description for process_data.py](#desc_pro)
+3. [Installations for train_classifier.py](#insta_train)
+4. [Description for train_classifier.py](#desc_train)
+5. [Installations for run.py](#insta_run)
+6. [Description for run.py](#desc_run)
+7. [Instructions](#instructions)
+8. [Authors and Acknowledgements](#licensing)
+
+## process_data.py <a name="insta_pro"></a>
 ## Installations
 
 import pandas as pd <br>
@@ -10,10 +21,11 @@ from sqlalchemy import create_engine
 
 [Panda](https://pandas.pydata.org/) is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. <br>
 [create engine](https://docs.sqlalchemy.org/en/14/core/engines.html) creates an Engine instance.
-## Description
+
+## Description <a name="desc_pro"></a>
 The first part of the data pipeline is the extract, transform, and load process. Here the dataset will be read, cleaned and then stored in a SQLite database.  
 
-## train_classifier.py
+## train_classifier.py <a name="insta_train"></a>
 ## Installations
 
 import sys, nltk, re <br>
@@ -47,10 +59,12 @@ from sklearn.metrics import f1_score, precision_score, recall_score <br>
 [RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. <br>
 [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) searchs over specified parameter values for an estimator. <br>
 [sklearn.metrics](https://scikit-learn.org/stable/modules/model_evaluation.html) quantifies the quality of predictions. <br>
-## Description
+
+## Description <a name="desc_train"></a>
 In the second part of the data pipeline we will split the data into a training set and a test set. Then, we will create a machine learning pipeline that uses NLTK, as well as scikit-learn's Pipeline and GridSearchCV to output a final model that uses the message column to predict for 36 categories (multi-output classification). At the end we export
 the model to a pickle file.
-## run.py
+
+## run.py <a name="insta_run"></a>
 ## Installations
 
 import json <br>
@@ -66,12 +80,26 @@ from sqlalchemy import create_engine <br>
 [request](https://docs.python-requests.org/en/latest/) is an elegant and simple HTTP library for Python. <br>
 [jsonify](https://www.fullstackpython.com/flask-json-jsonify-examples.html) is a function in Flask's flask.json module. jsonify serializes data to JavaScript Object Notation (JSON) format, wraps it in a Response object with the application/json mimetype. <br>
 [joblib](https://joblib.readthedocs.io/en/latest/) is a set of tools to provide lightweight pipelining in Python. <br>
-## Description
+
+## Description <a name="desc_run"></a>
 The last part we'll display your results in a Flask web app. [Udacity](https://www.udacity.com/) provided a working web app.
 On the web app ther is an input fieled for distress messages, which will be analysed after pushing the "Classify Message" button.
 Below we see the distribution of the message genres.
 The analysis shows how the message has been categorized.
 
-## Authors, Acknowledgements
+## Instructions <a name="instructions"></a>
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
+2. Go to `app` directory: `cd app`
+
+3. Run your web app: `python run.py`
+
+4. Click the `PREVIEW` button to open the homepage
+## Authors, Acknowledgements <a name="licensing"></a>
 
 Author: Oliver Groß
